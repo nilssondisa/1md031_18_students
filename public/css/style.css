@@ -1,0 +1,65 @@
+@import 'https://fonts.googleapis.com/css2?family=Spectral+SC:wght@500&display=swap';
+
+body {
+  font-family: 'Spectral SC', serif;
+  font-size: 12pt;
+  /*    text-align: center;
+      font-size: 12pt; */
+}
+
+.innehåll {
+  font-weight: bold;
+}
+
+#burgers {
+  background-color: #FFCBCB;
+  color: white;
+  border: 8px double black;
+}
+#contact {
+  border: 1px solid black;
+}
+
+#head {
+  height: 1px;
+    overflow: hidden;
+    margin:1px;
+}
+
+#headpic {
+  opacity: 0.5;
+  height: auto;
+  width: 100%;
+
+}
+
+#texthead {
+  margin-top:-21%;
+  margin-left: 25%;
+
+  font-size: 260%;
+  color: black;
+  position: absolute;
+
+}
+
+button {
+  font-family: 'Spectral SC', serif;
+  font-size: 13pt;
+  border: 2px solid black;
+}
+
+button:hover {
+  font-size: 13pt;
+  background-color: #FFCBCB;
+}
+
+table, button {
+  margin: 30px;
+}
+
+thead {
+  font-size: 17pt;
+}
+
+/* Your comment goes here */

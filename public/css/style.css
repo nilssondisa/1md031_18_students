@@ -14,33 +14,32 @@ body {
 #burgers {
   background-color: #FFCBCB;
   color: white;
+  font-size: 14pt;
   border: 8px double black;
 }
+
 #contact {
   border: 1px solid black;
 }
 
 #head {
   height: 1px;
-    overflow: hidden;
-    margin:1px;
+  overflow: hidden;
+  margin: 1px;
 }
 
 #headpic {
   opacity: 0.5;
   height: auto;
   width: 100%;
-
 }
 
 #texthead {
-  margin-top:-21%;
-  margin-left: 25%;
-
+  margin-top: -21%;
+  margin-left: 23%;
   font-size: 260%;
   color: black;
   position: absolute;
-
 }
 
 button {
@@ -54,8 +53,8 @@ button:hover {
   background-color: #FFCBCB;
 }
 
-table, button {
-  margin: 30px;
+button {
+  margin: 50px;
 }
 
 thead {
@@ -63,3 +62,42 @@ thead {
 }
 
 /* Your comment goes here */
+.grid {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 100 100 100;
+  background-color: FFCBCB;
+  color: FFCBCB;
+
+}
+
+.box {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 10;
+  font-size: 110%;
+  border: 2px solid black;
+}
+
+.a {
+grid-columns: 1;
+  grid-row: 1 / span 2;
+}
+
+.b {
+grid-columns: 2;
+  grid-row: 1 / span 2;
+}
+
+.c {
+  grid-columns: 3;
+  grid-row: 1 / span 2;
+}
+
+  /* är detta rätt? ska detta användas */
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 6vw;
+    }
+}

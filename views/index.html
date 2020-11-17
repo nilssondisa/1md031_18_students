@@ -6,12 +6,12 @@
 
   <meta charset="utf-8" />
 
-  <link rel="stylesheet" type="text/css" href="/css/style.css" />
-
-  <script src="js/js_script.js"></script>
 
   <script src="https://vuejs.org/js/vue.js"></script>
-  <script src="js/vue_script.js"></script>
+  <script type="text/javascript" src="js/menu.js"></script>
+  <script src="js/js_script.js" defer></script>
+  <script src="js/vue_script.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
   <title>BURGER-QUEEN </title>
 
@@ -22,35 +22,87 @@
 <body>
   <main>
 
-    <img id="headpic" src="https://www.marieclaire.com.au/media/70589/royal-family-tiaras-header.jpg" alt="Span" title="Burger-Queens"  width="300">
+    <img id="headpic" src="https://www.marieclaire.com.au/media/70589/royal-family-tiaras-header.jpg" alt="Span" title="Burger-Queens" width="300">
     <section id="head">
       <h1 id="texthead">Välkommen till Burger-Queen</h1>
 
     </section>
-  </main>
 
 
 
 
-  <section id="burgers">
 
-    <center>
-      <h1>Våra burgare:</h1>
-      <h4> Här kan ni välja bland våra kungliga burgare </h4>
+    <section id="burgers">
 
-      <!-- Testkod -->
+
+      <center>
+
+        <h1>Våra burgare:</h1>
+
+
+        <div>
+          <h4> Här kan ni välja bland våra kungliga burgare </h4>
+
+          <!-- comment -->
+          <div id="myID">
+            <div class="grid">
+
+              <div v-for="burger in burgers" :class="['box']">
+
+
+                  <h2>{{ burger.name }}</h2>
+
+
+                <div><img :src="burger.img" width="300"></div>
+                <input type="checkbox" :value=burger.name id="burgcheck" name="burgcheck" >
+
+                <label for="burgercheck">Välj burgare</label>
+
+                <ul>
+                  <li>
+                    <h4>{{ burger.ing }}</h4>
+                  </li>
+
+                  <li v-if=burger.gluten!=false>
+                    <h4>Gluten</h4>
+                  </li>
+
+
+
+                  <li v-if=burger.lactose!=false>
+                    <h4>Laktos</h4>
+                  </li>
+
+
+
+
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+      </center>
+
+      </div>
+    </section>
+
+
+    <!-- Testkod
       <div class="grid">
 
-        <div class="box a"><h2>Silvias smaskiga</h2>
-          <img src="https://whoabella.com/wp-content/uploads/2014/01/thenutellaburger.png" alt="Span" title="Another in-line element"  width="300">
+        <div class="box a">
+          <h2>Silvias smaskiga</h2>
+          <img src="https://whoabella.com/wp-content/uploads/2014/01/thenutellaburger.png" alt="Span" title="Another in-line element" width="300">
           <p> Hemmagjord riskaka (gluten)</p>
           <p>Glutenfritt bröd</p>
           <p>Chokladdoppat kött</p>
 
         </div>
-        <div class="box b"><h2>Royal snack-attack</h2>
+        <div class="box b">
+          <h2>Royal snack-attack</h2>
 
-          <img src="https://www.partyhallen.se/cache/d7/799x799-Produktbilder_Asba_godis-hamburgare-mini-2.jpg" alt="Span" title="Another in-line element"  width="300">
+          <img src="https://www.partyhallen.se/cache/d7/799x799-Produktbilder_Asba_godis-hamburgare-mini-2.jpg" alt="Span" title="Another in-line element" width="300">
 
           <p>Ingridienser av hög kvalitet</p>
           <p>Gluten- och laktosfri</p>
@@ -58,9 +110,10 @@
 
         </div>
 
-        <div class="box c"><h2>Queen ElizaBurger</h2>
+        <div class="box c">
+          <h2>Queen ElizaBurger</h2>
 
-          <img src="https://cdn3.cdnme.se/cdn/6-2/112338/images/2008/hamburgare_allt_19890169.jpg" alt="Span" title="Another in-line element"  width="300">
+          <img src="https://cdn3.cdnme.se/cdn/6-2/112338/images/2008/hamburgare_allt_19890169.jpg" alt="Span" title="Another in-line element" width="300">
 
           <p>Kött av högsta kvalitet</p>
           <p>Mycket lyxig ost (laktos)</p>
@@ -68,81 +121,105 @@
         </div>
 
       </div>
+    </center>
   </section>
 
+-->
 
 
-  <section>
     <section id="contact">
       <center>
-        <h2>Leveransinformation</h1>
-          <p> Nedan fyller ni i leveransadress och betalningsinfo.</p>
+        <h2>Leveransinformation</h2>
+        <p> Nedan fyller ni i leveransadress och betalningsinfo.</p>
 
 
 
 
 
-          <p>
-            <label for="full name">Full name</label><br>
-            <input type="text" id="full name" name="fn" required="required" placeholder="First- and Last Name">
-          </p>
+        <p>
+          <label for="fullname">Full name</label><br>
+          <input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last Name">
+        </p>
 
-          <p>
-            <label for="email">Email</label><br>
-            <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
-          </p>
-          <p>
-            <label for="street">Street</label><br>
-            <input type="text" id="street" name="st" placeholder="Street name">
-          </p>
-          <p>
-            <label for="house">House</label><br>
-            <input type="text" id="house" name="hs" placeholder="House number">
-          </p>
-
-
+        <p>
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
+        </p>
+        <p>
+          <label for="street">Street</label><br>
+          <input type="text" id="street" name="st" placeholder="Street name">
+        </p>
+        <p>
+          <label for="house">House</label><br>
+          <input type="text" id="house" name="hs" placeholder="House number">
+        </p>
 
 
 
-          <p>
-            <center>
-              <label for="payment method">Betalningssätt</label><br>
-              <select id="payment" name="pm">
-                <option selected="selected">Bankkort</option>
-                <option>Swish</option>
-                <option>Bankdosa</option>
-                <option>PayPal</option>
 
-              </select>
-          </p>
+
+        <p>
+
+          <label for="payment method">Betalningssätt</label><br>
+          <select id="payment" name="pm">
+            <option selected="selected">Bankkort</option>
+            <option>Swish</option>
+            <option>Bankdosa</option>
+            <option>PayPal</option>
+
+          </select>
+        </p>
+      </center>
     </section>
     <section id="gender">
 
       <center>
-        <h2>Titel</h1>
+        <h2>Titel</h2>
 
 
-          <input checked="checked" type="radio" id="bq" name="kön">
-          <label for="bq">BurgerQueen</label>
+        <input checked="checked" type="radio" id="bq" name="kön" value="BurgerQueen">
+        <label for="bq">BurgerQueen</label>
 
 
-          <input type="radio" id="bk" name="kön">
-          <label for="bk">BurgerKing</label>
+        <input type="radio" id="bk" name="kön" value="BurgerKing">
+        <label for="bk">BurgerKing</label>
 
-          <input type="radio" id="bg" name="kön">
-          <label for="bg">Burger</label>
+        <input type="radio" id="bg" name="kön" value="Burger">
+        <label for="bg">Burger</label>
 
-          <input type="radio" id="ej" name="kön">
-          <label for="ej">Har ingen titel</label>
-
+        <input type="radio" id="ej" name="kön" value="Pöbel">
+        <label for="ej">Har ingen titel</label>
+      </center>
     </section>
+    <center>
 
-    <center><button type="submit"> Beställ! </br> <img src="https://www.kungahuset.se/images/18.2490add172982faa1d32dcd/1597922268148/HMD%20lättläst.jpg" alt="Span" title="Beställ" width="300"> </button>
 
-      <hr>
-      <footer> &copy; 2020 Burgermaster Nilssons Inc. </footer>
-      </hr>
+
+      <button id="orderss" type="submit"> Beställ! <div>
+
+          <img src="https://www.kungahuset.se/images/18.2490add172982faa1d32dcd/1597922268148/HMD%20lättläst.jpg" alt="Span" title="Beställ" width="300">
+        </div>
+      </button>
+
+      <div id="displayOrderInfo"> </div>
+
+      <div id="displayBurgerInfo"> </div>
+
     </center>
+
+
+
+    <!-- vue knapp
+       <div id="orders">
+           <button v-on:click="markDone(key)">Button klicked!</button>
+       </div>
+-->
+
+    <hr>
+    <footer> &copy; 2020 Burgermaster Nilssons Inc. </footer>
+
+  </main>
 </body>
+
 
 </html>

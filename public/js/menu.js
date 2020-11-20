@@ -12,7 +12,7 @@ name: "Royal-Snack-Attack",
 kCal: 55,
 lactose: false,
 gluten: false,
-img: "https://www.partyhallen.se/cache/d7/799x799-Produktbilder_Asba_godis-hamburgare-mini-2.jpg",
+img: "https://cdn.partytajm.se/18994-thickbox_default/godis-hamburgare-mini.jpg",
 ing:"Lokalproducerad gummi"
 },
 {
@@ -28,7 +28,7 @@ name: "Lady-D",
 kCal: 3,
 lactose: false,
 gluten: true,
-img: "https://whoabella.com/wp-content/uploads/2014/01/thenutellaburger.png",
+img: "https://ardo.com/files/attachments/.15639/w900h600zcCq85_QUINOA_KALE_BURGER_SLAD_WRAPPED_372_2.jpg",
 ing :"Mumsigheter"
 },
 {
@@ -36,7 +36,7 @@ name: "Pöbel-Bugaren",
 kCal: 400,
 lactose: true,
 gluten: true,
-img: "https://whoabella.com/wp-content/uploads/2014/01/thenutellaburger.png",
+img: "https://media.istockphoto.com/photos/real-life-homemade-burger-what-hamburgers-really-look-like-picture-id927593762?k=6&m=927593762&s=612x612&w=0&h=2kjlJDS0LaU50OQT8tUVeVrXMTJyLIkZQRMAeNOsmBg=",
 ing :"Svampar"
 }
 

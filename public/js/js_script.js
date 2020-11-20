@@ -16,8 +16,8 @@ orderArray =[];
 
 var fullname=document.getElementById('fullname');
 var email=document.getElementById('email');
-var street=document.getElementById('street');
-var house=document.getElementById('house');
+//var street=document.getElementById('street');
+//var house=document.getElementById('house');
 var payment=document.getElementById('payment');
 
 var titleList=document.getElementsByName('kön');
@@ -30,8 +30,8 @@ for (i=0; i<titleList.length; i++) {
 orderArray.push(title.value)
 orderArray.push(fullname.value);
 orderArray.push(email.value);
-orderArray.push(street.value);
-orderArray.push(house.value);
+//orderArray.push(street.value);
+//orderArray.push(house.value);
 orderArray.push(payment.value);
 
 
